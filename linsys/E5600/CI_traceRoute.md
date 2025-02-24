@@ -7,19 +7,18 @@
 - Manufacturer's website information：https://www.linksys.com/
 - Firmware download address ：https://downloads.linksys.com/support/assets/firmware/FW_E5600_1.1.0.26_prod.img
 
-![image-20250224102758745](%E6%BC%8F%E6%B4%9E%E6%95%B4%E7%90%86%E7%BB%86%E8%8A%82.assets/image-20250224102758745.png)
+![image-20250224102758745](CI_traceRoute.assets/image-20250224102758745.png)
 
 ### Vulnerability Description
 
 In the `\usr\share\lua\runtime.lua` file, there is a **command injection vulnerability** in the `runtime.traceRoute` function via the `pt` parameter.
 
-![image-20250224110329468](%E6%BC%8F%E6%B4%9E%E6%95%B4%E7%90%86%E7%BB%86%E8%8A%82.assets/image-20250224110329468.png)
+![image-20250224110329468](CI_traceRoute.assets/image-20250224110329468.png)
 
 ### Payload
 
 We can trigger this vulnerability by injecting the `ls` command using the following payload.
 
-![image-20250224183329944](%E6%BC%8F%E6%B4%9E%E6%95%B4%E7%90%86%E7%BB%86%E8%8A%82.assets/image-20250224183329944.png)
+![image-20250224183329944](CI_traceRoute.assets/image-20250224183329944.png)
 
-![image-20250224183654817](%E6%BC%8F%E6%B4%9E%E6%95%B4%E7%90%86%E7%BB%86%E8%8A%82.assets/image-20250224183654817.png)
-
+![image-20250224183654817](CI_traceRoute.assets/image-20250224183654817.png)
