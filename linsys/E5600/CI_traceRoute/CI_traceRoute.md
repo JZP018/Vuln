@@ -16,7 +16,7 @@ In the \usr\share\lua\runtime.lua file, there is a command injection vulnerabili
 
 We can trigger this vulnerability by injecting the ls command using the following payload.
 
-![image]linsys/E5600/CI_traceRoute/image-20250224183329944.png
+![image](linsys/E5600/CI_traceRoute/image-20250224183329944.png)
 
-![image]linsys/E5600/CI_traceRoute/image-20250224183654817.png
+![image](linsys/E5600/CI_traceRoute/image-20250224183654817.png)
 
