@@ -11,7 +11,7 @@ Firmware download address ：https://downloads.linksys.com/support/assets/firmwa
 ![image](https://github.com/JZP018/Vuln/blob/main/linsys/E5600/CI_pingTest_count/image-20250224230227518.png)
 ## Vulnerability Description
 
-In the \usr\share\lua\runtime.lua file, there is a command injection vulnerability in the runtime.pingTest function via the pt["count"] parameter.
+In the \usr\share\lua\runtime.lua file, there is a command injection vulnerability in the runtime.pingTest function via the pt["pkgsize"] parameter.
 
 ![image](https://github.com/JZP018/Vuln/blob/main/linsys/E5600/CI_pingTest_pkgsize/image-20250224231450455.png)
 
