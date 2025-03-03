@@ -18,7 +18,7 @@ In the \usr\share\lua\runtime.lua file, there is a command injection vulnerabili
 ## Payload
 ![image](https://github.com/JZP018/Vuln/blob/main/linsys/E5600/CI_macClone_mc.ip/image-20250303213947503.png)
 
-We can trigger this vulnerability by injecting the ls command using the following payload. [CI_pingTest_count.py](https://github.com/JZP018/Vuln/blob/main/linsys/E5600/CI_macClone_mc.ip/CI_macClone_mc.ip.py)
+We can trigger this vulnerability by injecting the ls command using the following payload. [CI_macClone_mc.ip.py](https://github.com/JZP018/Vuln/blob/main/linsys/E5600/CI_macClone_mc.ip/CI_macClone_mc.ip.py)
 
 ![images](https://github.com/JZP018/Vuln/blob/main/linsys/E5600/CI_macClone_mc.ip/image-20250303214035796.png)
 
