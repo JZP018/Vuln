@@ -6,17 +6,17 @@
     Manufacturer's website information：https://www.linksys.com/
     Firmware download address ：https://downloads.linksys.com/support/assets/firmware/FW_E5600_1.1.0.26_prod.img
 
-![image-20250224102758745](https://github.com/JZP018/Vuln/blob/main/linsys/E5600/CI_traceRoute/image-20250224102758745.png)
+![image-20250224102758745](https://github.com/JZP018/Vuln/blob/main/linsys/E5600/CI_emailReg_email/image-20250304132331801.png)
 ## Vulnerability Description
 
-In the \usr\share\lua\runtime.lua file, there is a command injection vulnerability in the runtime.traceRoute function via the pt parameter.
+Linksys E5600 v1.1.0.26 was discovered to contain a command injection vulnerability in the runtime.emailReg function . The vulnerability can be triggered via the `pt["email"]` parameter.
 
-![image-20250224110329468](https://github.com/JZP018/Vuln/blob/main/linsys/E5600/CI_traceRoute/image-20250224110329468.png)
+![image-20250224110329468](https://github.com/JZP018/Vuln/blob/main/linsys/E5600/CI_emailReg_email/image-20250304132758062.png)
 ## Payload
 
-The telnet connection feature of this router is disabled by default and cannot be configured through the web interface. We can enable this feature by injecting the command `/usr/sbin/telnetd -l /bin/sh` to achieve shell access.[CI_traceRoute.py](https://github.com/JZP018/Vuln/blob/main/linsys/E5600/CI_traceRoute/CI_traceRoute.py)
+The vulnerability was verified by injecting the command `ls > www/999.txt` into the `email` parameter, as shown in the figure below. The result of the `ls` command was successfully displayed in the `999.txt` file located in the router's `www` directory.
+[CI_emailReg_email.py](https://github.com/JZP018/Vuln/blob/main/linsys/E5600/CI_emailReg_email/CI_emailReg_email.py)
 
-![image](https://github.com/JZP018/Vuln/blob/main/linsys/E5600/CI_traceRoute/image-20250224183329944.png)
+![image](https://github.com/JZP018/Vuln/blob/main/linsys/E5600/CI_emailReg_email/image-20250304133801783.png)
 
-![image](https://github.com/JZP018/Vuln/blob/main/linsys/E5600/CI_traceRoute/image-20250224183654817.png)
 
