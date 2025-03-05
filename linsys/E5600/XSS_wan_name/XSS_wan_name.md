@@ -1,4 +1,4 @@
-# Linksys E5600 V1.1.0.26 command injection
+# Linksys E5600 V1.1.0.26 XSS
 ## Product Information
 
     Device: Linksys E5600
